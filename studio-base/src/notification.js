@@ -31,7 +31,7 @@ export async function subscribeToPush(publicVapidKey) {
 
   console.log("Subscribed successfully:", subscription);
 
-  await fetch("http://localhost:4000/subscribe", {
+  await fetch("https://2547-180-190-145-56.ngrok-free.app/subscribe", {
     method: "POST",
     body: JSON.stringify(subscription),
     headers: {
@@ -57,7 +57,7 @@ export async function unsubscribeFromPush() {
       if (success) {
         console.log("🛑 Unsubscribed successfully:", subscription);
 
-        await fetch("http://localhost:4000/unsubscribe", {
+        await fetch("https://2547-180-190-145-56.ngrok-free.app/unsubscribe", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
